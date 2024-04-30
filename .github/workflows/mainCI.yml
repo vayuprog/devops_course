@@ -1,5 +1,5 @@
 name: CI
-
+  
 on:
   push:
     branches: [ "main" ]
@@ -8,6 +8,9 @@ on:
 
 jobs:
   task12:
+    env:
+      using: 'node20'
+      main: 'main.js'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
